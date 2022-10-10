@@ -37,7 +37,7 @@ int partition(int *array, size_t size, int low, int high)
 	return (i);
 }
 
-/*
+/**
  * qSort - sorts an array of integers in ascending order using the
  *		`Quick sort` algorithm
  * @array: array to be sorted
@@ -51,7 +51,7 @@ void qSort(int *array, size_t size, int low, int high)
 {
 	int p;
 
-	if (low >= high || low < 0 || size <= 0)
+	if (low >= high || low < 0)
 		return;
 
 	p = partition(array, size, low, high);
