@@ -3,6 +3,7 @@
 /**
  * partition - implements the `Lomuto partition scheme`
  * @array: array to sort
+ * @size: length of @array
  * @low: the lower bound of the @array, usually 0
  * @high: the higher bound of @array, usually length(array) - 1
  *
@@ -37,7 +38,7 @@ int partition(int *array, size_t size, int low, int high)
 }
 
 /*
- * quick_sort - sorts an array of integers in ascending order using the
+ * qSort - sorts an array of integers in ascending order using the
  *		`Quick sort` algorithm
  * @array: array to be sorted
  * @size: size of @array
