@@ -24,8 +24,6 @@ int partition(int *array, size_t size, int low, int high)
 			temp = array[j];
 			array[j] = array[i];
 			array[i] = temp;
-
-			print_array(array, size);
 		}
 	}
 
@@ -33,6 +31,7 @@ int partition(int *array, size_t size, int low, int high)
 	temp = pivot;
 	array[high] = array[i];
 	array[i] = temp;
+	print_array(array, size);
 
 	return (i);
 }
