@@ -16,7 +16,7 @@ int partition(int *array, size_t size, int low, int high)
 	i = low - 1;
 	pivot = array[high];
 
-	for (j = low; j < (high - 1); j++)
+	for (j = low; j < (high); j++)
 	{
 		if (array[j] <= pivot)
 		{
@@ -59,6 +59,7 @@ void qSort(int *array, size_t size, int low, int high)
 	qSort(array, size, low, p - 1);
 	qSort(array, size, p + 1, high);
 }
+
 /**
  * quick_sort - initializes the recursive `quickSort` function
  * @array: array to be sorted
