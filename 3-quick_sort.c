@@ -21,17 +21,26 @@ int partition(int *array, size_t size, int low, int high)
 		if (array[j] <= pivot)
 		{
 			i++;
-			temp = array[j];
-			array[j] = array[i];
-			array[i] = temp;
+			if (array[i] != array[j])
+			{
+				temp = array[j];
+				array[j] = array[i];
+				array[i] = temp;
+
+				print_array(array, size);
+			}
 		}
 	}
 
 	i++;
-	temp = pivot;
-	array[high] = array[i];
-	array[i] = temp;
-	print_array(array, size);
+	if (array[i] != pivot)
+	{
+		temp = pivot;
+		array[high] = array[i];
+		array[i] = temp;
+
+		print_array(array, size);
+	}
 
 	return (i);
 }
